@@ -30,6 +30,7 @@ import ViewMoreText from "react-native-view-more-text";
 import Modal from "react-native-modal";
 
 import Video from "react-native-af-video-player";
+import video_img from "../image/qualpros.png";
 
 class TutorDetail extends Component {
   static navigationOptions = {
@@ -225,16 +226,19 @@ class TutorDetail extends Component {
                   <Right />
                 </CardItem>
                 <View> 
+                {tutor.tutor_profile_video === "" ? null :
                 <Video
                         //autoPlay
-                        url={url}
+                        url={tutor.tutor_profile_video}
                         title={title}
-                        logo={logo}
-                        placeholder={placeholder}
+                        
+                        logo={video_img}
+                        placeholder={video_img}
                         onMorePress={() => this.onMorePress()}
                         onFullScreen={status => this.onFullScreen(status)}
                         //fullScreenOnly
                       />
+                }
                   {/* <Button
                     style={{
                       padding: 10,

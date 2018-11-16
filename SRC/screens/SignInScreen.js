@@ -26,6 +26,7 @@ import styles from "../Theme/Styles/Signin";
 import Logo from "../image/qualpros.png";
 import axios from 'axios';
 import AwesomeAlert from 'react-native-awesome-alerts';
+import OneSignal from 'react-native-onesignal';
 
 class SignInScreen extends Component {
   
@@ -100,7 +101,8 @@ onIds(device) {
       let { data } = await axios.post('https://chat.qualpros.com/api/login', {
         email: this.state.email,
         password: this.state.password,
-        
+        device_id: '1234567890',
+        device_type:'ios'
       })
         .then((response) => {
           

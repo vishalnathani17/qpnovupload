@@ -226,7 +226,7 @@ class SearchScreen extends Component {
                     </Left>
                     <Right>
                       <View style={{ flexDirection: "row" }}>
-                        <Button
+                        {/* <Button
                           style={{ padding: 10, backgroundColor: "#d91009" }}
                           onPress={() =>
                             this.props.navigation.navigate(
@@ -236,7 +236,7 @@ class SearchScreen extends Component {
                           }
                         >
                           <Text style={{ color: "#fff" }}>Book Now</Text>
-                        </Button>
+                        </Button> */} 
                         <Button
                           style={{
                             padding: 10,
